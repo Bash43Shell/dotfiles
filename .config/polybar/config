@@ -1,0 +1,333 @@
+[colors]
+	;background	= ${xrdb:color0:#222}
+	background	= #101010
+	background-alt	= #202020
+	;foreground	= ${xrdb:color7:#222}
+	foreground	= #ffffff
+	foreground-alt	= #ffffff
+
+;Lunaria
+        ;background	= ${xrdb:color0:#222}
+	;background	= #ffffff
+	;background-alt	= #eeeeee
+	;foreground	= ${xrdb:color7:#222}
+	;foreground	= #000000
+	;foreground-alt	= #111111
+
+	red		= #ffffff
+	green		= #ffffff
+	blue		= #ffffff
+	active		= #ffffff
+	inactive	= #808080
+	urgent		= #404040
+
+[bar/mainbar-i3]
+	monitor		= ${env:MONITOR:LVDS1}
+	width		= 100%
+	height		= 25
+	;offset-x	= 2%
+	;offset-y	= 2%
+	radius		= 0.0
+	fixed-center	= false
+
+	background	= ${colors.background}
+	foreground	= ${colors.foreground}
+
+	line-size	= false
+	line-color	= #ffffff
+
+	;border-size		= 1
+	;border-left-size	= 2
+	;border-right-size	= 2
+	border-top-size		= 1
+	border-bottom-size	= 1
+	border-color		= ${colors.urgent}
+
+	padding-left		= 1
+	padding-right		= 1
+
+	module-margin-left	= 1
+	module-margin-right	= 1
+
+	font-0			= DroidSerif-Regular:size=10;2
+	font-1			= FontAwesome-Regular:size=10;2
+	font-2			= DejaVuSerif-Regular:Size=10;2
+
+	modules-left		= i3 mpd
+	modules-center		= 
+	modules-right		= wifi tethering0 tethering1 cpu memory temperature xbacklight volume date logout
+	separator		= |
+
+	tray-position		= right
+	tray-padding		= 2
+	;tray-detached		= true
+	;tray-maxsize		= 20
+	;tray-scale		= true
+	;tray-transparent	= true
+	;tray-background	= ${colors.background}
+
+	 wm-restack		= i3
+	 ;override-redirect	= true
+	;scroll-up		= i3wm-wsnext
+	;scroll-down		= i3wm-wsprev
+
+	cursor-click		= pointer
+	cursor-scroll		= ns-resize
+
+[module/xwindow]
+	type		= internal/xwindow
+	label		= %title:0:30:...%
+
+[module/i3]
+	type		= internal/i3
+	pin-workspaces	= true
+	enable-click	= true
+	enable-scroll	= false
+	reverse-scroll	= false
+	wrapping-scroll	= false
+	strip-wsnumbers	= true
+	index-sort	= true
+	fuzzy-match	= true
+
+	ws-icon-0 = 1;
+	ws-icon-1 = 2;
+	ws-icon-2 = 3;
+	ws-icon-3 = 4;
+	ws-icon-4 = 5;
+	ws-icon-5 = 6;
+	ws-icon-6 = 7;
+	ws-icon-7 = 8;
+	ws-icon-8 = 9;
+	ws-icon-9 = 10;
+
+	label-mode-padding	= 1
+	label-mode-background	= ${colors.background}
+	label-mode-foreground	= ${colors.foreground}
+
+	; focused = Active workspace on focused monitor
+	label-focused			= %name%
+	label-focused-background	= ${colors.background}
+	label-focused-foreground	= ${colors.active}
+	label-focused-underline		= #2020ff
+	label-focused-padding		= 2
+
+	; unfocused = Inactive workspace on any monitor
+	label-unfocused			= %name%
+	label-unfocused-background	= ${colors.background}
+	label-unfocused-foreground	= ${colors.inactive}
+	label-unfocused-underline	= #ffffff
+	label-unfocused-padding		= 2
+
+	; visible = Active workspace on unfocused monitor
+	label-visible			= %icon%
+	label-visible-background	= ${self.label-focused-background}
+	;label-visible-underline	= ${self.label-focused-underline}
+	label-visible-padding		= 2
+
+	; urgent = Workspace with urgency hint set
+	label-urgent			= %name% │
+	label-urgent-background		= ${colors.background}
+	label-urgent-foreground		= ${colors.urgent}
+	label-urgent-underline		= #20ff20
+	label-urgent-padding		= 1
+
+[module/mpd]
+	type			= internal/mpd
+	host			= 127.0.0.1
+	port			= 6601
+	;format-online		= <icon-prev> <icon-stop> <toggle> <icon-next> | <bar-progress> |   <label-song>
+	format-online		= <icon-prev> <icon-stop> <toggle> <icon-next> |   <label-song>
+	icon-prev		= 
+	icon-stop		= 
+	icon-play		= 
+	icon-pause		= 
+	icon-next		= 
+	label-song		= %artist% - %title%
+	label-song-maxlen	= 32
+	label-song-ellipsis	= true
+	bar-progress-width	= 10
+	bar-progress-indicator	= 
+	bar-progress-fill	= 
+	bar-progress-empty	= 
+	;    
+	bar-progress-fill-foreground		= #ffffff
+	bar-progress-indicator-foreground	= #808080
+	bar-progress-empty-foreground		= #404040
+
+[module/xbacklight]
+	type				= internal/xbacklight
+	format				= <label>
+	format-prefix			= " "
+	format-underline		= #f900f9
+	label				= %percentage%
+
+[module/cpu]
+	type				= internal/cpu
+	interval			= 1
+	format-prefix			= " "
+	format-underline		= #f90000
+	label				= %percentage:2:3%
+
+[module/memory]
+	type				= internal/memory
+	interval			= 1
+	format-prefix			= " "
+	format-underline		= #f9f900
+	label				= %percentage_used%
+
+[module/wlan]
+	type				= internal/network
+	interface			= wlp2s0
+	interval			= 3.0
+	format-connected		= <label-connected>
+	format-connected-underline	= #9f78e1
+	label-connected			=  %essid%
+	format-disconnected		=  Off
+	format-disconnected-foreground	= ${colors.blue}
+	format-disconnected-underline	= #9f78e1
+
+[module/wifi]
+	type = internal/network
+	interface = wlp2s0
+	interval = 1
+	ping_interval = 10
+	udspeed-minwidth = 2
+	format-connected = <label-connected>
+	label-connected =  %upspeed%  %downspeed% %{T-}
+
+[module/tethering0]
+	type = internal/network
+	interface = enp3s0f2
+	interval = 1
+	ping_interval = 10
+	udspeed-minwidth = 2
+	format-connected = <label-connected>
+	label-connected =  %upspeed%  %downspeed% %{T-}
+
+[module/tethering1]
+	type = internal/network
+	interface = enp0s20u3
+	interval = 1
+	ping_interval = 10
+	udspeed-minwidth = 2
+	format-connected = <label-connected>
+	label-connected =  %upspeed%  %downspeed% %{T-}
+
+[module/eth]
+	type					= internal/network
+	interface				= enp3s0f2
+	interval				= 3.0
+	format-connected-underline		= #55aa55
+	format-connected-prefix			= " "
+	format-connected-prefix-foreground	= ${colors.foreground-alt}
+	label-connected				= %local_ip%
+	format-disconnected			=
+	;format-disconnected			= <label-disconnected>
+	;format-disconnected-underline		= ${self.format-connected-underline}
+	;label-disconnected			= %ifname% disconnected
+	;label-disconnected-foreground		= ${colors.foreground-alt}
+
+[module/date]
+	type				= internal/date
+	interval			= 5
+
+	date				=
+	date-alt			= " %Y-%m-%d"
+
+	time				= %H:%M
+	time-alt			= %H:%M:%S
+
+	format-prefix			= ""
+	format-prefix-foreground	= ${colors.foreground-alt}
+	format-underline		= #0a6cf5
+
+	label				= %date% %time%
+
+[module/volume]
+	type				= internal/alsa
+	format-volume			= <label-volume>
+	label-volume-underline		= #00f9f9
+	label-volume			=  %percentage%
+	label-muted			=  Muted
+	label-muted-foreground		= ${colors.blue}
+	label-muted-underline		= #00f9f9
+
+[module/temperature]
+	type				= internal/temperature
+	thermal-zone			= 0
+	warn-temperature		= 80
+	format				= <ramp> <label>
+	;format-underline		= #7bcdb4
+	format-warn			= <ramp> <label-warn>
+	format-underline		= #00f900
+	;format-warn-underline		= #7bcdb4
+	label				= %temperature-c%
+	label-warn			= %temperature-c%
+	label-warn-foreground		= ${colors.blue}
+	ramp-0				= 
+	ramp-1				= 
+	ramp-2				= 
+	ramp-3				= 
+	ramp-4				= 
+	ramp-foreground			= ${colors.blue}
+
+[module/logout]
+	type				= custom/menu
+	format-spacing			= 1
+	label-open			= 
+	;label-open-foreground		= ${colors.secondary}
+	label-close			=  Close
+	label-close-foreground		= ${colors.blue}
+	label-separator			= |
+	;label-separator-foreground	= ${colors.foreground-alt}
+
+	menu-0-0			=  Logout
+	menu-0-0-foreground		= ${colors.red}
+	menu-0-0-exec			= i3-msg exit
+
+[module/powermenu]
+	type				= custom/menu
+	format-spacing			= 1
+	label-open			= 
+	;label-open-foreground		= ${colors.secondary}
+	label-close			=  Close
+	label-close-foreground		= ${colors.blue}
+	label-separator			= |
+	;label-separator-foreground	= ${colors.foreground-alt}
+
+	menu-0-0			=  Reboot
+	menu-0-0-foreground		= ${colors.green}
+	menu-0-0-exec			= menu-open-1
+	menu-0-1			=  Poweroff
+	menu-0-1-foreground		= ${colors.red}
+	menu-0-1-exec			= menu-open-2
+
+	menu-1-0			=  Cancel
+	menu-1-0-foreground		= ${colors.blue}
+	menu-1-0-exec			= menu-open-0
+	menu-1-1			=  Reboot
+	menu-1-1-foreground		= ${colors.green}
+	menu-1-1-exec			= systemctl reboot
+
+	menu-2-0			=  Poweroff
+	menu-2-0-foreground		= ${colors.red}
+	menu-2-0-exec			= systemctl poweroff
+	menu-2-1			=  Cancel
+	menu-2-1-foreground		= ${colors.blue}
+	menu-2-1-exec			= menu-open-0
+
+[settings]
+	screenchange-reload		= true
+	compositing-background		= source ;xorg
+	;compositing-background		= screen
+	compositing-foreground		= source
+	compositing-border		= over
+	;throttle-output		= 5
+	;throttle-output-for		= 10
+	;throttle-input-for		= 30
+
+[global/wm]
+	;margin-top			= 5
+	;margin-bottom			= 5
+
+	;vim:ft				= dosini

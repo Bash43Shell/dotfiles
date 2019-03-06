@@ -1,0 +1,233 @@
+sw_volume: 88
+audio_device_state:1:pulse audio
+audio_device_state:1:my_fifo
+state: play
+current: 52
+time: 9.004000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Drive/Bintang yang Bersinar (2010)/Drive_Melepasmu Live.mp3
+1:Drive/Bintang yang Bersinar (2010)/Drive_Melepasmu.mp3
+2:Campuran/Drive_Bersama Bintang.mp3
+3:Campuran/Bondan & Fade to Black_Bunga.mp3
+4:Campuran/Bondan & Fade to Black_Tetap Semangat.mp3
+5:Campuran/Bondan & Fade to Black_Ya Sudahlah.mp3
+6:Campuran/D'Masiv_Cinta Ini Membunuhku.mp3
+7:Campuran/D'Masiv_Dengarlah Sayang.mp3
+8:Campuran/D'Masiv_Satu-Satunya.mp3
+9:Campuran/Dewa 19_Aku Milikmu.mp3
+10:Campuran/Dewa 19_Kangen.mp3
+11:Campuran/Dewa 19_Pupus.mp3
+12:Campuran/Dewa 19_Separuh Nafas.mp3
+13:Campuran/Gaby_Tinggal Kenangan.mp3
+14:Campuran/Hanin Dhiya_Akad.mp3
+15:Campuran/Kangen Band_Cinta Yang Sempurna.mp3
+16:Campuran/Killing Me Inside_Biarlah Laki-laki.mp3
+17:Campuran/Naff_Akhirnya Ku Menemukanmu.mp3
+18:Campuran/Nano_Sampai Ku Mati.mp3
+19:Campuran/Nano_Sebatas Mimpi.mp3
+20:Campuran/Nidji_Sang Mantan.mp3
+21:Campuran/Nineball_Hingga Akhir Waktu.mp3
+22:Campuran/Repvblik_Hanya Ingin Kau Tahu.mp3
+23:Campuran/Repvblik_Sandiwara Cinta.mp3
+24:Campuran/Repvblik_Selimut Tetangga.mp3
+25:Campuran/Repvblik_Tiada Guna Lagi.mp3
+26:Campuran/Seventeen_Hal Terindah.mp3
+27:Campuran/Seventeen_Jaga Selalu Hatimu.mp3
+28:Campuran/Seventeen_Menemukanmu.mp3
+29:Campuran/Slank_Virus.mp3
+30:Campuran/Tipe X_Melati Aku Benci Kamu.mp3
+31:Campuran/Tuhan Yang Aneh.mp3
+32:Campuran/Utopia_Baby Doll.mp3
+33:Campuran/Utopia_Benci.mp3
+34:Campuran/Utopia_Hujan.mp3
+35:Campuran/Virzha - Tentang Rindu.mp3
+36:Letto/Letto - Truth, Cry And Lie (2006)/Letto_Ruang Rindu.mp3
+37:Letto/Letto - Don't Make Me Sad (2007)/Letto_Sebelum Cahaya.mp3
+38:Soundtrack/Wind.mp3
+39:Soundtrack/7!!_Orange (Acoustic Ver.).mp3
+40:Soundtrack/7!!_Start Line (Acoustic Ver.).mp3
+41:Soundtrack/Blue Bird.mp3
+42:Soundtrack/Cliff Edge_Endless Tears (feat. Nakamura Maiko).mp3
+43:Soundtrack/Do As Infinity_Fukai Mori.mp3
+44:Soundtrack/Endless Tears.mp3
+45:Soundtrack/Eyelis_Hikari no kiseki.mp3
+46:Soundtrack/Eyelis_Mirai no Tobira.mp3
+47:Soundtrack/Secreat Base_Kimi ga Kureta Mono.mp3
+48:Soundtrack/Lia_My Soul, Your Beats! (Instrumental).mp3
+49:Soundtrack/Lia_My Soul, Your Beats! (TV Size).mp3
+50:Soundtrack/Lia_My Soul, Your Beats!.mp3
+51:Soundtrack/Lisa_Ichiban no Takaramono.mp3
+52:Soundtrack/Karuta_Ichiban no Takaramono.mp3
+53:Soundtrack/Hatsumi Takada_Ashita Mata Aeru Yo ne (Accoustic).mp3
+54:Soundtrack/ChouCho_Sunset Hills Accoustic.mp3
+55:Soundtrack/ChouCho_Komorebi iro no Kioku.mp3
+56:Avenged Sevenfold/A7x_Dear God.mp3
+57:Avenged Sevenfold/A7x_Seize the day.mp3
+58:Avenged Sevenfold/A7x_So Far Away.mp3
+59:Avenged Sevenfold/A7x_Warmness on the soul.mp3
+60:Guns n Roses/Guns 'N' Roses_Don't Cry.mp3
+61:Linkin Park/2003 Linkin Park - Meteora/09 - Linkin Park - Breaking The Habit.mp3
+62:Betharia Sonatha/Betharia Sonatha - Biar Ku Sendiri.mp3
+63:Betharia Sonatha/Betharia Sonatha - Biarkanlah Dia Pergi.mp3
+64:Betharia Sonatha/Betharia Sonatha - Hati Seorang Wanita.mp3
+65:Betharia Sonatha/Betharia Sonatha - Hati Yang Luka.mp3
+66:Betharia Sonatha/Betharia Sonatha - Jangan Ingin Menang Sendiri.mp3
+67:Betharia Sonatha/Betharia Sonatha - Kau Tercipta Untukku.mp3
+68:Betharia Sonatha/Betharia Sonatha - Seandainya.mp3
+69:Betharia Sonatha/Betharia Sonatha - Tak Mungkin Lagi.mp3
+70:Jawa/Aas Rolan - Emong Diwayu.mp3
+71:Jawa/Dewi Kirana_Ora Ndueni.mp3
+72:Jawa/Diana Sastra_Cibulan.mp3
+73:Iwi S/Iwi S_Aja Marek Maning.mp3
+74:Iwi S/Iwi S_Inget Demenan.mp3
+75:Iwi S/Iwi S_Manuk Kepudang.mp3
+76:Last Child/Last Child feat Giselle_Seluruh Nafas Ini.mp3
+77:Last Child/Last Child_Diary despresiku (Acoustic).mp3
+78:Last Child/Last Child_Diary despresiku.mp3
+79:Last Child/Last Child_Pedih (Live Ganaskustik).mp3
+80:Last Child/Last Child_Pedih.mp3
+81:Doel Sumbang/Doel Sumbang Sunda/Doel Sumbang - Awewe Sapi Daging.mp3
+82:Wali/Cari Jodoh/Wali - Yank.mp3
+83:Wali/Cari Jodoh/Wali - Baik Baik Sayang.mp3
+84:Wali/Cari Jodoh/Wali - Kekasih Halal.mp3
+85:Wali/Orang Bilang/Wali - Aku Sakit.mp3
+86:Wali/Orang Bilang/Wali - DIK.mp3
+87:Wali/Aku Bukan Bang Toyib/Wali - Nenekku Pahlawanku.mp3
+88:Lama/Anie Carera_Cintaku Tak Terbatas Waktu.mp3
+89:Lama/Uci Bing Slamet_Bukit Berbunga.mp3
+90:Lama/Jamal Mirdad_Natalia.mp3
+91:Lama/Inka Christie_Rela.mp3
+92:Campuran/Pas Band_Jengah.mp3
+93:Campuran/Once_Dealova.mp3
+94:Campuran/Once_Kucinta Aku Apa Adanya.mp3
+95:Campuran/Piterband_Menghapus Bedakmu.mp3
+96:Koleksi/Poppy Mercury - Satukanlah Hati Kami.mp3
+97:Koleksi/Poppy Mercury_Bukan Aku Yang Kau Cinta.mp3
+98:Koleksi/Nia Daniati_Gelas-gelas Kaca.mp3
+99:Koleksi/Mayangsari_Kusalah Menilai.mp3
+100:Koleksi/Julius Sitanggang_Maria.mp3
+101:Koleksi/Amy Feat Inka_Demi Cinta Ku.mp3
+102:Wiz Khalifa/Rolling Papers/16 - Black And Yellow (G-mix) [Songspk.club].mp3
+103:Wiz Khalifa/Rolling Papers/02 - On My Level (feat. Too Short) [Songspk.club].mp3
+104:Wiz Khalifa/Rolling Papers/03 - Black And Yellow [Songspk.club].mp3
+105:Wiz Khalifa/Rolling Papers/04 - Roll Up [Songspk.club].mp3
+106:Wiz Khalifa/Rolling Papers/05 - Hopes And Dreams [Songspk.club].mp3
+107:Wiz Khalifa/Rolling Papers/06 - Wake Up [Songspk.club].mp3
+108:Wiz Khalifa/Rolling Papers/07 - The Race [Songspk.club].mp3
+109:Wiz Khalifa/Rolling Papers/08 - Star of the Show (feat. Chevy Woods) [Songspk.club].mp3
+110:Wiz Khalifa/Rolling Papers/09 - No Sleep [Songspk.club].mp3
+111:Wiz Khalifa/Rolling Papers/10 - Get Your [Songspk.club].mp3
+112:Wiz Khalifa/Rolling Papers/11 - Top Floor [Songspk.club].mp3
+113:Wiz Khalifa/Rolling Papers/12 - Fly Solo [Songspk.club].mp3
+114:Wiz Khalifa/Rolling Papers/13 - Rooftops (feat. Currensy) [Songspk.club].mp3
+115:Wiz Khalifa/Rolling Papers/14 - Cameras [Songspk.club].mp3
+116:Wiz Khalifa/Rolling Papers/15 - Taylor Gang (feat. Chevy Woods) [Songspk.club].mp3
+117:Ikke Nurjanah/Ikke Nurjanah_Cinta Dan Dilema.mp3
+118:Iis Sugiarti/Iis Sugiarti_Cermin Yang Retak.mp3
+119:Iis Sugiarti/Iis Sugiarti_Disini Aku Menanti.mp3
+120:Iis Sugiarti/Iis Sugiarti_Do'i Sayang.mp3
+121:Iis Sugiarti/Iis Sugiarti_Ingatkah Kau Padaku.mp3
+122:Iis Sugiarti/Iis sugiarti_Istilah Cinta Tembang Kenangan.mp3
+123:Iis Sugiarti/Iis Sugiarti_Jangan Kau Berharap.mp3
+124:Iis Sugiarti/Iis Sugiarti_Joget India.mp3
+125:Iis Sugiarti/Iis Sugiarti_Kabar Kabar Burung.mp3
+126:Iis Sugiarti/Iis Sugiarti_Kenangan DiJalan.mp3
+127:Iis Sugiarti/Iis Sugiarti_Kutelan Sendiri.mp3
+128:Iis Sugiarti/Iis Sugiarti_Melodi Memory Tembang Kenangan.mp3
+129:Iis Sugiarti/Iis Sugiarti_Memory Sekolah Tua.mp3
+130:Iis Sugiarti/Iis Sugiarti_Puas Di Hatimu, Sakit Di Hatiku.mp3
+131:Iis Sugiarti/Iis Sugiarti_Pulangkan Saja.mp3
+132:Iis Sugiarti/Iis Sugiarti_Sahabat Pena.mp3
+133:Iis Sugiarti/Iis Sugiarti_Sakitnya hati ini.mp3
+134:Iis Sugiarti/Iis Sugiarti_Satu Nama Satu Cinta.mp3
+135:Iis Sugiarti/Iis Sugiarti_Selamat Tidur Sayang.mp3
+136:Koleksi/Amy Feat Inka_Nafas Cinta.mp3
+137:Koleksi/Dewi Yull_Kini Baru Kau Rasa.mp3
+138:Koleksi/Inka_Gambaran Cinta.mp3
+139:Koleksi/Lesti_Bulan Diranting Cemara.mp3
+140:Koleksi/Maya Angela_Bangku tua.mp3
+141:Soundtrack/Konemoto Hisako_Kimi wo Shiru Koto.mp3
+142:Soundtrack/MUCC - Nirvana.mp3
+143:Alan Walker/Alan Walker_Sing Me to Sleep.mp3
+144:Alan Walker/Alan Walker_Faded.mp3
+145:Alan Walker/Alan Walker vs Coldplay_Hymn For The Weekend [Remix].mp3
+146:Alan Walker/Alan Walker_Alone (Instrumental Remix).m4a
+147:Alan Walker/Alan Walker_Fade (Original Mix).mp3
+148:Soundtrack/Riya - Chiisana Te No Hira.mp3
+149:Soundtrack/Lia - Toki wo Kizamu Uta.mp3
+150:Soundtrack/Sora Amamiya - Kanade.mp3
+151:Iis Sugianto/Akupun Ingin Cinta.MP3
+152:Iis Sugianto/Bukan Aku Tak Sayang.MP3
+153:Iis Sugianto/Bunga Sedap Malam.MP3
+154:Iis Sugianto/Jangan Sakiti Hatinya.MP3
+155:Iis Sugianto/Nasibmu Dan Nasibku.MP3
+156:Iis Sugianto/Salah Siapa.MP3
+157:Iis Sugianto/Teluk Bayur.mp3
+158:Koleksi/Nani Sugianto - Bagai Cermin Yang Retak.mp3
+159:Soundtrack/Lia - Torch.mp3
+160:Soundtrack/Nano.RIPE_Hana no Iro.mp3
+161:Soundtrack/Kiroro_Mirai E.mp3
+162:Soundtrack/SAO_Courage.mp3
+163:Soundtrack/SAO_Innocence (Opening ALO).mp3
+164:Soundtrack/SAO_Ignite.mp3
+165:Soundtrack/SAO_Overfly (Ending ALO).mp3
+166:Soundtrack/SAO_Startear.mp3
+167:Soundtrack/SAO_Crossing Field (Opening).mp3
+168:Soundtrack/Tabi no Tochuu.mp3
+169:Soundtrack/Tamizawa Tomofumi_Kimi ni Todoke.mp3
+170:Soundtrack/Stereopony_Tsukiakari no Michishirube -Instrumental-.mp3
+171:Soundtrack/Stereopony_Tsukiakari no Michishirube.mp3
+172:Campuran/Virgoun - Surat Cinta Untuk Starla.mp3
+173:Transcode/Katyusha.mp3
+174:Transcode/Naff_Akhirnya Ku Menemukanmu.mp3
+175:Transcode/Naff_Disatu Bintang Aku Menunggu.mp3
+176:Transcode/Naff_Kau Masih Kekasihku.mp3
+177:Transcode/Naff_Ketika Semuanya Harus Berakhir (Live Konser Sukabumi 15 Mei 2007).mp3
+178:Transcode/Naff_Ketika Semuanya Harus Berakhir.mp3
+179:Transcode/Naff_Terendap Laraku Live.mp3
+180:Transcode/Naff_Terendap Laraku.mp3
+181:Ungu/Enda (Ungu) - Maafkan Aku.mp3
+182:Poppy Mercury/1995 - Hati Siapa Tak Luka/Poppy Mercury - Hati Siapa Tak Luka.mp3
+183:Poppy Mercury/1994 - Biarkan Ku Pergi/Poppy Mercury - Biarkan Ku Pergi.mp3
+184:Poppy Mercury/1993 - Terlambat Sudah/Poppy Mercury - Terlambat Sudah.mp3
+185:Poppy Mercury/1993 - Antara Kau Dia dan Aku/Poppy Mercury - Antara Kau Dia dan Aku.mp3
+186:Sunda/Detty Kurnia Feat Darso_Naon Lepatna.mp3
+187:Sunda/Detty Kurnia Feat Darso_Saha Nu Lepat.mp3
+188:Sunda/Nia Daniaty_Jalir Janji 2.mp3
+189:Sunda/Nia Daniaty_Jalir Janji.mp3
+190:Sunda/Rya Fitria - Bogoh Kasaha.mp3
+191:Sunda/Yana Kermit_Sagileuk-Sagileuk.mp3
+192:Ungu/Ungu - Untukmu Selamanya/03. Ungu - Kekasih Gelapku.mp3
+193:Payung Teduh/Payung Teduh_Akad.mp3
+194:Doel Sumbang/Doel Sumbang Sunda/Doel Sumbang - Ema.mp3
+195:Linkin Park/Linkin Park - Papercut.mp3
+196:The Script/Superheroes.mp3
+197:The Script/Man On A Wire.mp3
+198:The Script/Breakeven.mp3
+199:The Script/This = Love.mp3
+200:Soundtrack/Tamako Market (ED) - Neguse (Tamako Kitashirakawa (Aya Suzaki)).mp3
+201:Soundtrack/Sawano Hiroyuki_Keep on keeping on.mp3
+202:Guns n Roses/Guns 'N' Roses_Patience.mp3
+203:Soundtrack/God only knows_Secrets of the Goddess.mp3
+204:Iis Sugianto/Hapuslah Air Mata.MP3
+205:Koleksi/Ratih Purwasih_Desember Kelabu.mp3
+206:Koleksi/Ratih Purwasih_Hitam Putih Fotomu.mp3
+207:Avril Lavigne/Avril Lavigne_Complicated.mp3
+208:Avril Lavigne/Avril Lavigne_Dont Tell Me.mp3
+209:Avril Lavigne/Avril Lavigne_I Will Be.mp3
+210:Avril Lavigne/Avril Lavigne_Innocence.mp3
+211:Avril Lavigne/Avril Lavigne_Losing Grip.mp3
+212:Avril Lavigne/Avril Lavigne_Nobody's Home.mp3
+213:Avril Lavigne/Avril Lavigne_Sk8ter Boy.mp3
+214:Avril Lavigne/Avril Lavigne_slipped away.mp3
+215:Avril Lavigne/Avril Lavigne_Tomorrow.mp3
+216:Avril Lavigne/Avril Lavigne_When Yourre Gone.mp3
+217:Avril Lavigne/Avril Lavigne_Wish You Were Here.mp3
+playlist_end

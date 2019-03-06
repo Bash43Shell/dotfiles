@@ -1,0 +1,39 @@
+{
+	"icons": [ "paxy97", "awesome-fonts" ],
+	"defaults": {
+		"warning": {
+			"fg": "#000000", "bg": "#2020ff"
+		},
+		"critical": {
+			"fg": "#000000", "bg": "#20FF20"
+		},
+		"default-separators": false,
+		"separator-block-width": 0
+	},
+	"cycle": [
+		{ "fg": "#ffffff", "bg": "#202020" },
+		{ "fg": "#ffffff", "bg": "#404040" }
+	],
+	"dnf": {
+		"good": {
+			"fg": "#002b36",
+			"bg": "#859900"
+		}
+	},
+	"battery": {
+		"charged": {
+			"fg": "#1d2021",
+			"bg": "#b8bb26"
+		},
+		"AC": {
+			"fg": "#1d2021",
+			"bg": "#b8bb26"
+		}
+	},
+  "bluetooth": {
+      "ON": {
+			    "fg": "#1d2021",
+			    "bg": "#b8bb26"
+      }
+  }
+}

@@ -1,0 +1,105 @@
+* {
+	background-color:	rgba(0,0,0,0);
+	background:		#101010f0;
+	text-color:		#ffffff;
+	black:			#000000;
+	blue:			#2020ff;
+	dark:			#101010;
+	border:			#404040;
+	highlight:		bold #ffffff;
+}
+#window {
+	fullscreen:		true;
+	location:		west;
+	anchor:			west;
+	border:			0px 2px 0px 0px;
+	text-color:		@text-color;
+
+	orientation:		horizontal;
+	children:		[mainbox, dummy];
+}
+
+#dummy {
+	expand:			true;
+}
+
+#sidebar {
+	border:			2px 0px 0px 0px;
+	background-color:	@dark;
+	padding:		10px;
+}
+
+#button selected {
+	border-color:		@blue;
+	text-color:		@blue;
+}
+
+#entry {
+	width:			20em;
+}
+
+#inputbar {
+	background-color:	@dark;
+	text-color:		@text-color;
+	padding:		4px;
+	border:			1px 0px 1px 0px;
+	border-color:		@border;
+}
+
+#mainbox {
+	expand:			false;
+	background-color:	@background;
+	spacing:		20px;
+}
+
+#listview {
+	padding:		0px 1px 0px 20px;
+	dynamic:		false;
+	lines:			0;
+}
+
+#element selected normal {
+	border:			1px 0px 1px 0px;
+	border-color:		@border;
+}
+
+#element normal active {
+	text-color:		@text-color;
+}
+
+#element normal urgent {
+	text-color:		@text-color;
+}
+
+#element alternate normal {
+	text-color:		@text-color;
+}
+
+#element alternate active {
+	text-color:		@text-color;
+}
+
+#element alternate urgent {
+	text-color:		@text-color;
+}
+
+#element selected active {
+	background-color:	@text-color;
+	text-color:		@dark;
+}
+
+#element selected urgent {
+	background-color:	@text-color;
+	text-color:		@dark;
+}
+
+#inputbar {
+	children:		[ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+	expand:			false;
+	str:			" |";
+	margin:			0px 0.3em 0em 0em ;
+	text-color:		@text-color;
+}

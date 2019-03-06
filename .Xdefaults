@@ -1,0 +1,146 @@
+!- Color Scheme
+
+URxvt.background:		#101010
+URxvt.foreground:		#FFFFFF
+URxvt.borderColor:		#101010
+URxvt.cursorColor:		#FFFFFF
+URxvt.cursorColor2:		#AAAAAA
+URxvt.colorBD:			#FFFFFF
+URxvt.colorIT:			#4040FF
+URxvt.colorUL:			#40FF40
+URxvt.highlightColor:		#4080FF
+URxvt.highlightTextColor:	#FFFFFF
+URxvt.underlineColor:		#40FF40
+URxvt.pointerColor:		#1010FF
+URxvt.pointerColor2:		#10FF10
+URxvt.troughColor:		#FFFF40
+
+*color0:			#101010
+*color8:			#606060
+
+*color1:			#2020FF
+*color9:			#FFFF20
+
+*color2:			#00FFFF
+*color10:			#FF0000
+
+*color3:			#FF20FF
+*color11:			#20FF80
+
+*color4:			#20C560
+*color12:			#C56020
+
+*color5:			#CC60BB
+*color13:			#60BBCC
+
+*color6:			#90E060
+*color14:			#6090E0
+
+*color7:			#AAAAAA
+*color15:			#FFFFFF
+
+
+!- Interface
+URxvt.borderless:		true
+URxvt.cursorBlink:		true
+URxvt.cursorUnderline:		true
+#URxvt.depth:			32
+#URxvt.fading:			20
+
+#URxvt.font:			xft:xos4 Terminess Powerline:size=9
+#URxvt.font:			xft:Ubuntu Mono derivative Powerline:size=9
+#URxvt.font:			xft:Tinos for Powerline:size=9
+#URxvt.font:			xft:Symbol Neu for Powerline:size=9
+#URxvt.font:			xft:Space Mono for Powerline:size=9
+#URxvt.font:			xft:ProFont for Powerline:size=9
+#URxvt.font:			xft:NovaMono for Powerline:size=9
+#URxvt.font:			xft:Noto Mono for Powerline:size=9
+#URxvt.font:			xft:monofur for Powerline:size=9
+#URxvt.font:			xft:Meslo LG S for Powerline:size=9
+#URxvt.font:			xft:Liberation Mono for Powerline:size=9
+#URxvt.font:			xft:Inconsolata for Powerline:size=9
+URxvt.font:			xft:Go Mono for Powerline:size=9, xft:Monaco for Powerline:regular:size=9, xft:DejaVu Sans Mono for Powerline:size=9
+#URxvt.font:			xft:Droid Sans Mono for Powerline:size=9
+#URxvt.font:			xft:DejaVu Sans Mono for Powerline:size=9
+#URxvt.font:			xft:Cousine for Powerline:size=9
+#URxvt.font:			xft:Monaco for Powerline:regular:size=9
+
+URxvt.boldFont:			xft:Go Mono for Powerline:size=9
+#URxvt.letterSpace:		-1
+
+URxvt.intensityStyles:		false
+URxvt.internalBorder:		10
+URxvt.iso14755:			false
+URxvt.iso14755_52:		false
+URxvt.loginShell:		true
+URxvt.scrollBar:		false
+URxvt.shading:			0
+#URxvt.pastableTabs:		true
+#URxvt.skipBuiltinGlyphs:	true
+URxvt.termName:			rxvt-unicode-256color
+URxvt.transparent:		true
+URxvt.thickness:		1
+URxvt.urlLauncher:		firefox
+
+Xft.antialias:			true
+Xft.antialiasing:		true
+Xft.lcdfilter:			lcddefault
+Xft.dpi:			96
+Xft.hinting:			false
+Xft.rgba:			rgb
+
+!! Extensions
+URxvt.perl-ext-common:		default,matcher,resize-font,url-select,keyboard-select
+
+!! Url-Select
+URxvt.keysym.C-u:		perl:url-select:select_next
+URxvt.url-select.launcher:	linkhandler
+URxvt.url-select.underline:	true
+
+!! Keyboard-Select:
+URxvt.keysym.C-Escape:		perl:keyboard-select:activate
+
+!! Resize-Font
+URxvt.keysym.C-F11:		resize-font:smaller
+URxvt.keysym.C-F12:		resize-font:bigger
+
+!! Matcher
+URxvt.url-launcher:		linkhandler
+URxvt.matcher.button:		1
+
+
+
+! XTerm
+
+! General settings
+XTerm*termName:			xterm-256color
+XTerm*geometry:			80x24
+XTerm*saveLines:		1024
+XTerm*scrollBar:		False
+XTerm*loginshell:		False
+XTerm*cursorBlink:		False
+
+! Fonts and Encoding
+XTerm*utf8:			True
+XTerm*locale:			True
+XTerm*utf8Title:		True
+XTerm*renderFont:		True
+XTerm*preeditType:		Root
+XTerm*xftAntialias:		true
+XTerm*faceSize :		11
+XTerm*faceName:			xft:Monaco
+
+! Trim trailing spaces
+XTerm*trimSelection:		true
+
+! Fix alt-key inputting
+XTerm*eightBitInput:		false
+XTerm*metaSendsEscape:		true
+
+! Copy and paste with clipboard
+XTerm*translations: #override \
+	Ctrl Shift <KeyPress> C:		copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <KeyPress> V:		insert-selection(CLIPBOARD)
+
+! Allow selecting email/url by double-click
+XTerm*charClass:				33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48

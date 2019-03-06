@@ -1,0 +1,47 @@
+% egrep -v '^#' .ncmpcpp/config
+
+mpd_host =				"127.0.0.1"
+mpd_port =				"6601"
+mpd_music_dir =				"/home/jurigwifi/Music"
+mpd_connection_timeout =		"5"
+
+visualizer_fifo_path =			"/tmp/mpd.fifo"
+visualizer_output_name =		"my_fifo"
+visualizer_in_stereo =			"yes"
+visualizer_type =			"spectrum"
+visualizer_look =			"▋▋"
+#visualizer_look =			"oo"
+visualizer_sync_interval =		"10"
+progressbar_look =			"▃▃▃"
+#progressbar_look =			"─⊙ "
+message_delay_time =			"3"
+
+#user_interface =			"alternative"
+#playlist_display_mode =		"classic"
+browser_display_mode =			"columns"
+search_engine_display_mode =		"classic"
+playlist_editor_display_mode =		"classic"
+
+enable_window_title =			"no"
+titles_visibility =			"yes"
+header_visibility =			"no"
+playlist_shorten_total_times =		"yes"
+statusbar_visibility =			"no"
+display_bitrate =			"no"
+autocenter_mode =			"yes"
+centered_cursor =			"yes"
+follow_now_playing_lyrics = 		"yes"
+mouse_support =				"yes"
+mouse_list_scroll_whole_page =		"yes"
+use_console_editor =			"yes"
+ask_before_clearing_playlists = 	"yes"
+
+now_playing_prefix =			"-> "
+#current_item_prefix =			"-> "
+lines_scrolled =			"1"
+locked_screen_width_part =		"60"
+
+external_editor =			"nano"
+
+#song_columns_list_format =		"(6)[]{} (23)[]{a} (26)[]{t|f} (40)[]{b} (4)[]{l}"
+song_columns_list_format =		"(94)[]{f} (6)[]{l}"

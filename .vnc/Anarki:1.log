@@ -1,0 +1,39 @@
+
+Xvnc TigerVNC 1.9.0 - built Jul 20 2018 11:32:25
+Copyright (C) 1999-2018 TigerVNC Team and many others (see README.rst)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12000000, The X.Org Foundation
+
+
+Thu Aug 23 15:07:08 2018
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5901
+ vncext:      Listening for HTTP connections on all interface(s), port 5801
+ vncext:      created VNC server for screen 0
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported high keycode 372 for name <I372> ignored
+>                   X11 cannot support keycodes above 255.
+>                   This warning only shows for the first high keycode.
+> Internal error:   Could not resolve keysym XF86WWAN
+> Internal error:   Could not resolve keysym XF86RFKill
+> Internal error:   Could not resolve keysym XF86Keyboard
+Errors from xkbcomp are not fatal to the X server
+/home/jurigwifi/.vnc/xstartup: line 25: twm: command not found
+/home/jurigwifi/.vnc/xstartup: line 24: xterm: command not found
+(EE) 
+(EE) Backtrace:
+(EE) 0: /usr/bin/Xvnc (OsLookupColor+0x13a) [0x55d89b47551a]
+(EE) 1: /usr/lib/libpthread.so.0 (funlockfile+0x50) [0x7fbe4cc2c3ff]
+(EE) 2: /usr/bin/Xvnc (_ZN14XserverDesktopD2Ev+0xdb) [0x55d89b3d10db]
+(EE) 3: /usr/bin/Xvnc (_ZN14XserverDesktopD0Ev+0xa) [0x55d89b3d124a]
+(EE) 4: /usr/bin/Xvnc (vncExtensionClose+0x28) [0x55d89b3c56b8]
+(EE) 5: /usr/bin/Xvnc (CloseDownExtensions+0x31) [0x55d89b435071]
+(EE) 6: /usr/bin/Xvnc (dix_main+0x3d2) [0x55d89b4253c2]
+(EE) 7: /usr/lib/libc.so.6 (__libc_start_main+0xf3) [0x7fbe4b4f2003]
+(EE) 8: /usr/bin/Xvnc (_start+0x2a) [0x55d89b2f306a]
+(EE) 
+(EE) Segmentation fault at address 0x8
+(EE) 
+Fatal server error:
+(EE) Caught signal 11 (Segmentation fault). Server aborting
+(EE) 
