@@ -1,158 +1,139 @@
-# ============================== Startup ===============================
+# ==============================================================================
+# VARIABEL =====================================================================
 
-#exec_always --no-startup-id feh --bg-scale /home/jurigwifi/Pictures/Night.jpeg
-exec --no-startup-id wal -R
-exec --no-startup-id variety
+set $background			#404040
+set $un-background		#101010
+set $ur-background		#202020
+set $text				#FFFFFF
+set $un-text			#FFFFFF
+set $indikasi			#404040
+set $pemisah			#404040
+set $border				#404040
+set $bar				#101010
+set $lock				#101010
 
-#exec_always --no-startup-id compton -f -I 0.03 -O 0.03 -D 10 -i 0.95 --shadow-blue 0.75 --shadow-green 0.25 --unredir-if-possible --backend glx --glx-no-stencil --vsync opengl --refresh-rate 60
-exec --no-startup-id compton -f -I 0.03 -O 0.03 -D 10 -i 0.95 --unredir-if-possible --backend glx --glx-no-stencil --vsync opengl --refresh-rate 60
+set $ws-1				#202020
+set $ws-2				#FFFFFF
+set $ws-3				#404040
+set $ws-4				#000000
+set $ws-5				#2020FF
 
-exec --no-startup-id mpd
-exec --no-startup-id nm-applet
-exec --no-startup-id ~/.config/polybar/launch.sh
-#exec_always --no-startup-id polybar example
+# AKHIR VARIABEL ===============================================================
+# ==============================================================================
+# ==============================================================================
+# AUTOSTART ====================================================================
 
-# Gaps
-# hide_edge_borders none|vertical|horizontal|both|smart
-hide_edge_borders both
-for_window [class="^.*"] border pixel 1
-#title_align left|center|right
-title_align center
-gaps inner 10
-gaps outer 10
+exec			--no-startup-id compton
+exec			--no-startup-id mpd
+exec			--no-startup-id wal -R
+exec			--no-startup-id variety
+exec_always		--no-startup-id nm-applet
 
-font pango: Droid Serif 10
+#exec			--no-startup-id compton -f -I 0.03 -O 0.03 -D 10 -i 0.95 --unredir-if-possible --backend glx --glx-no-stencil --vsync opengl --refresh-rate 60
+#exec			--no-startup-id feh --bg-scale /home/jurigwifi/Pictures/Night.jpeg
+#exec_always	--no-startup-id compton -f -I 0.03 -O 0.03 -D 10 -i 0.95 --shadow-blue 0.75 --shadow-green 0.25 --unredir-if-possible --backend glx --glx-no-stencil --vsync opengl --refresh-rate 60
+#exec_always	--no-startup-id ~/.config/polybar/launch.sh
+#exec_always	--no-startup-id polybar example
+#exec_always	--no-startup-id ~/.config/i3/pin-workspace
+#exec_always	--no-startup-id /usr/local/bin/anbox-bridge
+
+#shmlog			1024			# <size_in_bytes>
+#shmlog			on				# on|off|toggle
+
+#--> Enable/disable logging
+#--> or, from a terminal:
+#->> increase the shared memory log buffer to 50 MiB
+# i3-msg shmlog $((50*1024*1024))
+
+# END AUTOSTART ================================================================
+# ==============================================================================
+# ==============================================================================
+# TAMPILAN =====================================================================
+
+hide_edge_borders			both				# hide_edge_borders none|vertical|horizontal|both|smart
+title_align					center				# title_align left|center|right
+gaps inner					0
+gaps outer					0
+
+for_window					[class="^.*"] border pixel 1
+# default_border			normal|none|pixel
+# default_border			normal|pixel <px>
+# default_floating_border	normal|none|pixel
+# default_floating_border	normal|pixel <px>
+
+# mouse_warping				output|none
+# focus_follows_mouse		yes|no
+
+font						pango: Droid Serif 10
+font						pango:DejaVu Sans Mono 10
+font						pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
+font						pango:Terminus 10px
+font						-misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 popup_during_fullscreen		smart
 force_display_urgency_hint	1000 ms
 focus_on_window_activation	urgent
 
-# =========================== Akhir Startup ============================
+#--> WARNA
+#							Border		Background			Text		Indicator
+client.focused				$border		$background			$text		$indikasi
+client.unfocused			$border		$un-background		$un-text	$indikasi
+client.focused_inactive		$border		$ur-background		$un-text	$indikasi
+client.urgent				$border		$background			$text		$indikasi
 
-# ============================== Variabel ==============================
-
-set $background			#404040
-set $un-background		#101010
-set $ur-background		#202020
-set $text			#FFFFFF
-set $un-text			#FFFFFF
-set $indikasi			#404040
-set $pemisah			#404040
-set $border			#404040
-set $bar			#101010
-set $lock			#101010
-
-set $ws-1			#202020
-set $ws-2			#FFFFFF
-set $ws-3			#404040
-set $ws-4			#000000
-set $ws-5			#2020FF
-
-# =========================== Akhir Variabel ===========================
-
-# ============================== Jendela ===============================
-
-#				Border		Background	Text		Indicator
-client.focused			$border		$background	$text		$indikasi
-client.unfocused		$border		$un-background	$un-text	$indikasi
-client.focused_inactive		$border		$ur-background	$un-text	$indikasi
-client.urgent			$border		$background	$text		$indikasi
-
-
-#bar {
-#	font pango: Go 10
-#	position top
-#	status_command ~/.config/i3/Bumblebee/bumblebee-status -m sensors pasink pasource date time -p time.format="%H:%M:%S" #date.format="%a, %b %d %Y" -t gruvbox-powerline
-#	# separator_symbol "|"
-#	# tray_output none
+#--> STATUS BAR
+# bar {
+#	#status_command			i3status
+#	#status_command			i3blocks
+#	#status_command			~/.config/i3/Bumblebee/bumblebee-status -m sensors pasink pasource date time -p time.format="%H:%M:%S" date.format="%a, %b %d %Y" #-t gruvbox-powerline
+#
+#	mode              		dock				# dock|hide|invisible
+#	output					LVDS1
+#	position				top
+#	workspace_buttons		yes
+#	separator_symbol		"|"
+#	tray_output				none				# none|primary|<output>
+#	tray_padding			0
+#	strip_workspace_numbers	yes
+#	binding_mode_indicator	no
+#	font pango:				Droid Serif 10
 #	colors {
-#		background	$bar
-#		separator	$indikasi
-#		#			border		background	text
+#		background			$bar
+#		separator			$indikasi
+#		#					border		background	text
 #		focused_workspace	$ws-3		$ws-3		$ws-2
+#		# active_workspace	#333333		#5f676a		#ffffff
 #		inactive_workspace	$ws-1		$ws-1		$ws-2
 #		urgent_workspace	$ws-5		$ws-5		$ws-4
+#		# binding_mode		#2f343a		#900000		#ffffff
 #	}
+#	
+#	# bar hidden_state hide|show|toggle [<bar_id>]
+#	# bar mode dock|hide|invisible|toggle [<bar_id>]
+#	#--> Toggle between hide state and show state
+#	# bindsym $mod+m bar hidden_state toggle
+#	#--> Toggle between dock mode and hide mode
+#	# bindsym $mod+n bar mode toggle
+#	#--> Set the bar instance with id 'bar-1' to switch to hide mode
+#	# bindsym $mod+b bar mode hide bar-1
+#	#--> Set the bar instance with id 'bar-1' to always stay hidden
+#	# bindsym $mod+Shift+b bar mode invisible bar-1
+#	
+#	#--> disable clicking on workspace buttons
+#	# bindsym button1 nop
+#	#--> Take a screenshot by right clicking on the bar
+#	# bindsym --release button3 exec --no-startup-id import /tmp/latest-screenshot.png
+#	#--> execute custom script when scrolling downwards
+#	# bindsym button5 exec ~/.i3/scripts/custom_wheel_down
+#	#
+#	# bindsym $mod+x move container to workspace 3; workspace 3
 #}
-# =========================== Akhir Jendela ============================
 
-# ============================== Shortcut ==============================
+# workspace_layout			default|stacking|tabbed
+# workspace_layout			tabbed
 
-set $mod Mod4
-floating_modifier $mod
-# bindsym F1			exec --no-startup-id echo "help" > /dev/null
-
-bindsym $mod+Home		exec --no-startup-id wal -i ~/.config/variety/wallpaper/Background.jpeg
-bindsym $mod+Page_Up		exec --no-startup-id variety -n && wal -i $(cat ~/.config/variety/wallpaper/wallpaper.jpg.txt)
-bindsym $mod+Page_Down		exec --no-startup-id variety -p && wal -i $(cat ~/.config/variety/wallpaper/wallpaper.jpg.txt)
-bindsym $mod+End		exec --no-startup-id variety --toggle-pause 
-
-# bindsym $mod+Shift+c		reload
-bindsym $mod+BackSpace		restart
-bindsym $mod+Delete		exec i3lock --color "$lock"
-# bindsym $mod+Escape		exec "i3-nagbar -t warning -m 'Apakah anda ingin Logout?' -b 'Logout' 'i3-msg exit'"
-
-bindsym $mod+Return		exec i3-sensible-terminal
-#bindsym $mod+Shift+Return	exec xterm
-
-bindsym $mod+r 			exec rofi -show drun -show-icons -drun-icon-theme Numix-Circle-Light -disable-history -levenshtein-sort -click-to-exit -font 'Droid Serif 10' -theme ~/.config/rofi/sidebar
-bindsym F11			fullscreen toggle
-bindsym $mod+q			kill
-bindsym $mod+s			mode "resize"
-mode "resize" {
-	# Ganti ukuran menggunakan tombol panah
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
-
-	# Kembali ke semula
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
-}
-bindsym $mod+Ctrl+Up		resize grow height 5 px or 5 ppt
-bindsym $mod+Ctrl+Down		resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+Right		resize grow width 5 px or 5 ppt
-bindsym $mod+Ctrl+Left		resize shrink width 5 px or 5 ppt
-
-bindsym $mod+g			gaps inner current plus 5
-bindsym $mod+Shift+g		gaps inner current minus 5
-bindsym $mod+Shift+Ctrl+g	gaps inner all set 0; gaps outer all set 0
-bindsym $mod+Ctrl+g		gaps inner all set 10; gaps outer all set 10
-
-bindsym $mod+space		floating toggle
-bindsym $mod+F10		layout stacking
-bindsym $mod+F11		layout tabbed
-bindsym $mod+F12		layout toggle split
-
-bindsym $mod+h			split h
-bindsym $mod+v			split v
-
-bindsym $mod+Left		focus left
-bindsym $mod+Down		focus down
-bindsym $mod+Up			focus up
-bindsym $mod+Right		focus right
-bindsym $mod+Shift+Left		move left
-bindsym $mod+Shift+Down		move down
-bindsym $mod+Shift+Up		move up
-bindsym $mod+Shift+Right	move right
-
-bindsym $mod+Shift+Ctrl+space	focus mode_toggle
-bindsym $mod+a			focus parent
-bindsym $mod+d			focus child
-
-bindsym XF86AudioRaiseVolume	exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume	exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute		exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 5%
-bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 5%
-
-# workspace_layout		default|stacking|tabbed
-# workspace_layout		tabbed
-
-# Icon                                  
-# Workspace Label
+#--> Icon                                  
+#--> Workspace Label
 set $ws1			" Home"
 set $ws2			" File"
 set $ws3			" Media"
@@ -164,106 +145,270 @@ set $ws8			" Editor"
 set $ws9			" Office"
 set $ws10			" Setting"
 
-# Workspace Label
-#set $ws1			" Home"
-#set $ws2			" File"
-#set $ws3			"  Media"
-#set $ws4			" Browser"
-#set $ws5			" Social"
-#set $ws6			" Blender"
-#set $ws7			" Paint"
-#set $ws8			" Editor"
-#set $ws9			" Office"
-#set $ws10			" Setting"
+#--> Workspace Label
+#set $ws1			"1"
+#set $ws2			"2"
+#set $ws3			"3"
+#set $ws4			"4"
+#set $ws5			"5"
+#set $ws6			"6"
+#set $ws7			"7"
+#set $ws8			"8"
+#set $ws9			"9"
+#set $ws10			"10"
 
-# Control Workspace
-bindsym $mod+1			workspace $ws1
-bindsym $mod+2			workspace $ws2
-bindsym $mod+3			workspace $ws3
-bindsym $mod+4			workspace $ws4
-bindsym $mod+5			workspace $ws5
-bindsym $mod+6			workspace $ws6
-bindsym $mod+7			workspace $ws7
-bindsym $mod+8			workspace $ws8
-bindsym $mod+9			workspace $ws9
-bindsym $mod+0			workspace $ws10
+# AKHIR TAMPILAN ===============================================================
+# ==============================================================================
+# ==============================================================================
+# SHORTCUT =====================================================================
 
-bindsym $mod+Tab                workspace next
-bindsym $mod+Shift+Tab          workspace prev
-bindsym $mod+Ctrl+Tab           workspace back_and_forth
+set $mod						Mod4
+floating_modifier				$mod
+# bindsym F1					exec --no-startup-id echo "help" > /dev/null
+
+bindsym $mod+Ctrl+Shift+x		shmlog toggle
+
+#--> Kendali Workspace
+bindsym $mod+1					workspace $ws1
+bindsym $mod+2					workspace $ws2
+bindsym $mod+3					workspace $ws3
+bindsym $mod+4					workspace $ws4
+bindsym $mod+5					workspace $ws5
+bindsym $mod+6					workspace $ws6
+bindsym $mod+7					workspace $ws7
+bindsym $mod+8					workspace $ws8
+bindsym $mod+9					workspace $ws9
+bindsym $mod+0					workspace $ws10
+
+bindsym $mod+Tab				workspace next
+bindsym $mod+Shift+Tab			workspace prev
+bindsym $mod+z					workspace back_and_forth
 
 # Pindah Jendela Ke Workspace Lain
-bindsym $mod+Shift+1		move container to workspace $ws1
-bindsym $mod+Shift+2		move container to workspace $ws2
-bindsym $mod+Shift+3		move container to workspace $ws3
-bindsym $mod+Shift+4		move container to workspace $ws4
-bindsym $mod+Shift+5		move container to workspace $ws5
-bindsym $mod+Shift+6		move container to workspace $ws6
-bindsym $mod+Shift+7		move container to workspace $ws7
-bindsym $mod+Shift+8		move container to workspace $ws8
-bindsym $mod+Shift+9		move container to workspace $ws9
-bindsym $mod+Shift+0		move container to workspace $ws10
+bindsym $mod+Shift+1			move container to workspace $ws1
+bindsym $mod+Shift+2			move container to workspace $ws2
+bindsym $mod+Shift+3			move container to workspace $ws3
+bindsym $mod+Shift+4			move container to workspace $ws4
+bindsym $mod+Shift+5			move container to workspace $ws5
+bindsym $mod+Shift+6			move container to workspace $ws6
+bindsym $mod+Shift+7			move container to workspace $ws7
+bindsym $mod+Shift+8			move container to workspace $ws8
+bindsym $mod+Shift+9			move container to workspace $ws9
+bindsym $mod+Shift+0			move container to workspace $ws10
 
-# Musik
-bindsym $mod+m			exec urxvt -e ncmpcpp
-bindsym $mod+plus		exec --no-startup-id mpc -p 6601 next
-bindsym $mod+minus		exec --no-startup-id mpc -p 6601 prev
-bindsym $mod+Ctrl+m		exec --no-startup-id mpc -p 6601 toggle
-bindsym $mod+Shift+minus	exec --no-startup-id mpc -p 6601 seek -00:00:05
-bindsym $mod+Shift+plus		exec --no-startup-id mpc -p 6601 seek +00:00:05
-bindsym $mod+Ctrl+Shift+m	exec --no-startup-id mpc -p 6601 stop
-bindsym $mod+Shift+m		exec urxvt -e ncmpcpp -s visualizer
+# bindsym $mod+Shift+c			reload
+bindsym $mod+BackSpace			restart
+bindsym $mod+Delete				exec i3lock --color "$lock"
+# bindsym $mod+Escape			exec "i3-nagbar -t warning -m 'Apakah anda ingin Logout?' -b 'Logout' 'i3-msg exit'"
 
-# Aplikasi lain
-bindsym Print			exec --no-startup-id xfce4-screenshooter
-bindsym $mod+e			exec thunar;				workspace $ws2
-bindsym $mod+Shift+e		exec nautilus;				workspace $ws2
-bindsym $mod+Ctrl+e		exec urxvt -e ranger;
-bindsym $mod+b			exec firefox;				workspace $ws4
-bindsym $mod+Shift+b		exec opera;				workspace $ws4
-bindsym $mod+Ctrl+b		exec google-chrome-stable;		workspace $ws4
-bindsym $mod+t			exec urxvt -e htop
+bindsym $mod+Home				exec --no-startup-id wal -i ~/.config/variety/wallpaper/Background.jpeg
+bindsym $mod+Page_Up			exec --no-startup-id variety -n && wal -i $(cat ~/.config/variety/wallpaper/wallpaper.jpg.txt)
+bindsym $mod+Page_Down			exec --no-startup-id variety -p && wal -i $(cat ~/.config/variety/wallpaper/wallpaper.jpg.txt)
+bindsym $mod+End				exec --no-startup-id variety --toggle-pause 
 
-bindsym $mod+Insert		exec --no-startup-id x0vncserver -display :0 -passwordfile ~/.vnc/passwd
-bindsym $mod+Shift+Insert	exec --no-startup-id killall x0vncserver
-bindsym $mod+Pause		exec --no-startup-id aria2c --enable-rpc --rpc-listen-all
-bindsym $mod+Shift+Pause	exec --no-startup-id killall aria2c
+bindsym $mod+Return				exec i3-sensible-terminal
+# bindsym $mod+Shift+Return		exec xterm
 
+bindsym $mod+q					kill
+bindsym $mod+r					exec rofi -show drun -show-icons -drun-icon-theme Numix-Circle-Light -disable-history -levenshtein-sort -click-to-exit -font 'Droid Serif 10' -theme ~/.config/rofi/sidebar
+bindsym F11						fullscreen toggle
 
-# =========================== Akhir Shortcut ===========================
+bindsym $mod+s					mode "ukuran"
+mode "ukuran" {
+	#--> Ganti ukuran menggunakan tombol panah
+	bindsym Left				resize shrink width 10 px or 10 ppt
+	bindsym Down				resize grow height 10 px or 10 ppt
+	bindsym Up					resize shrink height 10 px or 10 ppt
+	bindsym Right				resize grow width 10 px or 10 ppt
 
-# ==================== Letak Aplikasi Pada Workspace ===================
+	#--> Keluar mode saat ini
+	bindsym Return				mode "default"
+	bindsym Escape				mode "default"
+	bindsym $mod+r				mode "default"
+}
 
-assign [class="Thunar"]				$ws2
-assign [class="Nautilus"] 			$ws2
-assign [class="mpv"]				$ws3
-assign [class="Firefox"]			$ws4
-assign [class="Opera"]				$ws4
-assign [class="whatsapp-desktop"]		$ws5
-assign [class="TelegramDesktop"]		$ws5
-assign [class="anbox"]				$ws6
-assign [class="Blender"]			$ws7
-assign [class="Gimp"]				$ws7
-assign [class="Inkscape"]			$ws7
-assign [class="Gedit"]				$ws8
-assign [class="libreoffice"]			$ws9
-assign [class="libreoffice-startcenter"]	$ws9
-assign [class="libreoffice-base"]		$ws9
-assign [class="libreoffice-calc"]		$ws9
-assign [class="libreoffice-draw"]		$ws9
-assign [class="libreoffice-impress"]		$ws9
-assign [class="libreoffice-math"]		$ws9
-assign [class="libreoffice-writer"]		$ws9
-assign [class="Nm-connection-editor"]		$ws10
-assign [class="obs"]				$ws10
+bindsym $mod+Shift+r			mode "launcher"
+mode "launcher" {
+	#--> Menjalankan aplikasi tanpa tombol modifikasi
+	bindsym f exec				firefox
+	bindsym t exec				thunderbird
 
-assign [title="GIMP Startup"]			move workspace $ws7
-assign [class="Gimp-2.10"]			move workspace $ws7
-# assign [name="FG/BG - Layers"] floating disable; move left; resize shrink width 50 px or 50 ppt
-# assign [name="Toolbox - Tool Options"] floating disable; move right; resize shrink width 50 px or 50 ppt
+	#--> Keluar mode saat ini
+	bindsym Escape				mode "default"
+	bindsym Return				mode "default"
+}
 
-for_window [class=URxvt]		floating enable
-for_window [class=File-roller]		floating enable
-for_window [class=Pavucontrol]		floating enable
-for_window [class=".*"] title_format "%class"
-# ================= Akhir Letak Aplikasi Pada Workspace ================
+bindsym $mod+Ctrl+Up			resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+Down			resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+Right			resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Left			resize shrink width 5 px or 5 ppt
+
+bindsym $mod+g					gaps inner current plus 5
+bindsym $mod+Shift+g			gaps inner current minus 5
+bindsym $mod+Shift+Ctrl+g		gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Ctrl+g				gaps inner all set 10; gaps outer all set 10
+
+bindsym $mod+space				floating toggle
+bindsym $mod+F10				layout stacking
+bindsym $mod+F11				layout tabbed
+bindsym $mod+F12				layout toggle split
+
+bindsym $mod+h					split h
+bindsym $mod+v					split v
+#bindsym $mod+t					split toggle
+
+bindsym $mod+Left				focus left
+bindsym $mod+Down				focus down
+bindsym $mod+Up					focus up
+bindsym $mod+Right				focus right
+bindsym $mod+Shift+Left			move left
+bindsym $mod+Shift+Down			move down
+bindsym $mod+Shift+Up			move up
+bindsym $mod+Shift+Right		move right
+
+bindsym $mod+Shift+Ctrl+space	focus mode_toggle
+bindsym $mod+a					focus parent
+bindsym $mod+d					focus child
+
+bindsym XF86AudioRaiseVolume	exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume	exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute			exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp		exec --no-startup-id xbacklight -inc 5%
+bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 5%
+
+#--> Musik
+bindsym $mod+m					exec urxvt -e ncmpcpp
+bindsym $mod+plus				exec --no-startup-id mpc -p 6601 next
+bindsym $mod+minus				exec --no-startup-id mpc -p 6601 prev
+bindsym $mod+Ctrl+m				exec --no-startup-id mpc -p 6601 toggle
+bindsym $mod+Shift+minus		exec --no-startup-id mpc -p 6601 seek -00:00:05
+bindsym $mod+Shift+plus			exec --no-startup-id mpc -p 6601 seek +00:00:05
+bindsym $mod+Ctrl+Shift+m		exec --no-startup-id mpc -p 6601 stop
+bindsym $mod+Shift+m			exec urxvt -e ncmpcpp -s visualizer
+
+#--> Aplikasi lain
+bindsym Print					exec --no-startup-id xfce4-screenshooter
+
+bindsym $mod+e					exec thunar;				workspace $ws2
+bindsym $mod+Ctrl+Shift+e		exec gksu thunar;			workspace $ws2
+bindsym $mod+Shift+e			exec nautilus;				workspace $ws2
+bindsym $mod+Ctrl+e				exec urxvt -e ranger;
+
+bindsym $mod+b					exec firefox;				workspace $ws4
+bindsym $mod+Shift+b			exec opera;				workspace $ws4
+bindsym $mod+Ctrl+b				exec google-chrome-stable;		workspace $ws4
+
+bindsym $mod+t					exec urxvt -e htop
+#bindsym $mod+t					exec gnome-system-monitor
+bindsym $mod+k					exec screenkey
+bindsym $mod+Shift+k			exec killall screenkey
+
+bindsym $mod+Shift+PauseBreak	exec killall aria2c
+bindsym $mod+PauseBreak			exec aria2c --enable-rpc --rpc-listen-all
+
+bindsym $mod+Insert				exec --no-startup-id x0vncserver -display :0 -passwordfile ~/.vnc/passwd
+bindsym $mod+Shift+Insert		exec --no-startup-id killall x0vncserver
+bindsym $mod+Pause				exec --no-startup-id aria2c --enable-rpc --rpc-listen-all
+bindsym $mod+Shift+Pause		exec --no-startup-id killall aria2c
+
+# AKHIR SHORTCUT ===============================================================
+# ==============================================================================
+# ==============================================================================
+# TATA LETAK APLIKASI PADA WORKSPACE ===========================================
+
+assign [class="Thunar"]							$ws2
+assign [class="Nautilus"] 						$ws2
+assign [class="mpv"]							$ws3
+assign [class="Firefox"]						$ws4
+assign [class="Opera"]							$ws4
+assign [class="whats-app-nativefier-d52542"]	$ws5
+assign [class="TelegramDesktop"]				$ws5
+assign [class="Thunderbird"]					$ws5
+assign [class="anbox"]							$ws6
+assign [class="Mailspring"]						$ws6
+assign [class="Blender"]						$ws7
+assign [class="Gimp"]							$ws7
+assign [class="Inkscape"]						$ws7
+assign [class="Gedit"]							$ws8
+assign [class="Org.gnome.gedit"]				$ws8
+assign [class="libreoffice"]					$ws9
+assign [class="libreoffice-startcenter"]		$ws9
+assign [class="libreoffice-base"]				$ws9
+assign [class="libreoffice-calc"]				$ws9
+assign [class="libreoffice-draw"]				$ws9
+assign [class="libreoffice-impress"]			$ws9
+assign [class="libreoffice-math"]				$ws9
+assign [class="libreoffice-writer"]				$ws9
+assign [class="Nm-connection-editor"]			$ws10
+assign [class="obs"]							$ws10
+
+assign [title="GIMP Startup"]					move workspace $ws7
+assign [class="Gimp-2.10"]						move workspace $ws7
+
+for_window [class=URxvt]						floating enable
+for_window [class=File-roller]					floating enable
+#for_window [class=Org.gnome.gedit]				floating enable
+for_window [class=Eog]							floating enable
+for_window [class="Gnome-system-monitor"]		floating enable
+for_window [class="Modem-manager-gui"]			floating enable
+for_window [class="4K Video Downloader"]		floating enable
+for_window [class=Pavucontrol]					floating enable
+for_window [title="Write"]						floating enable
+for_window [title="Thunderbird Preferences"]	floating enable
+for_window [title="Instant messaging status"]	floating enable
+for_window [title="Address Book"]				floating enable
+for_window [title="Blender Render"]				floating enable
+for_window [title="Blender Preferences"]		floating enable
+
+for_window [title="Diajar"]					floating enable <-- Khusus belajar bahasa pemrograman
+
+for_window [class=".*"]						title_format "%class"
+
+# TATA LETAK APLIKASI PADA WORKSPACE ===========================================
+# ==============================================================================
+# ==============================================================================
+# KONFIGURASI TAMBAHAN BELUM DICOBA ============================================
+
+#popup_during_fullscreen			smart|ignore|leave_fullscreen
+#--> Example:
+#popup_during_fullscreen			smart
+
+# focus_wrapping					yes|no|force
+#--> Legacy syntax, equivalent to "focus_wrapping force"
+# force_focus_wrapping				yes
+#--> Examples:
+#--> Disable focus wrapping
+# focus_wrapping					no
+#--> Force focus wrapping
+# focus_wrapping					force
+
+# i3-msg 'rename workspace 5 to 6'
+# i3-msg 'rename workspace 1 to "1: www"'
+# i3-msg 'rename workspace "1: www" to "10: www"'
+# i3-msg 'rename workspace to "2: mail"'
+# bindsym $mod+r exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+# bindsym $mod+1 workspace number "1: www"
+# bindsym $mod+2 workspace number "2: mail"
+
+#--> use window title, but no border
+# bindsym $mod+t					border normal 0
+#--> use no window title and a thick border
+# bindsym $mod+y					border pixel 3
+#--> use neither window title nor border
+# bindsym $mod+u					border none
+
+#--> Make the currently focused window a scratchpad
+# bindsym $mod+Shift+minus			move scratchpad
+
+#--> Show the first scratchpad window
+# bindsym $mod+minus				scratchpad show
+
+#--> Show the sup-mail scratchpad window, if any.
+# bindsym mod4+s					[title="^Sup ::"] scratchpad show
+
+#--> Disable focus change for clicks on titlebars
+#--> with the middle mouse button
+# bindsym button2					nop
+
+# AKHIR KONFIGURASI TAMBAHAN BELUM DICOBA ======================================
+# ==============================================================================
